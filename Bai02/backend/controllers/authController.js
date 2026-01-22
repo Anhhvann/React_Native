@@ -16,16 +16,17 @@ exports.login = (req, res) => {
     message: 'Login success',
     user: {
       id: user.id,
+      username: user.username,
       email: user.email,
     },
   });
 };
 
 exports.register = (req, res) => {
-  const { email, password } = req.body;
+  const { username, email, password } = req.body;
 
-  if (!email || !password) {
-    return res.status(400).json({ message: 'Missing data' });
+  if (!username || !email || !password) {
+    return res.status(400).json({ message: 'Missing data: username, email and password are required' });
   }
 
   const exists = users.find(u => u.email === email);
@@ -35,6 +36,7 @@ exports.register = (req, res) => {
 
   users.push({
     id: Date.now(),
+    username,
     email,
     password,
   });
