@@ -186,7 +186,7 @@ export default function ForgetPassword() {
         keyboardShouldPersistTaps="handled"
       >
         <View style={styles.card}>
-          <Text style={styles.title}>🔐 Quên Mật Khẩu</Text>
+          <Text style={styles.title}>Quên Mật Khẩu</Text>
           <Text style={styles.subtitle}>
             {step === 1 
               ? "Nhập email hoặc số điện thoại để nhận mã OTP"
@@ -211,7 +211,7 @@ export default function ForgetPassword() {
                       inputType === "email" && styles.toggleTextActive,
                     ]}
                   >
-                    📧 Email
+                    Email
                   </Text>
                 </TouchableOpacity>
                 <TouchableOpacity
@@ -227,7 +227,7 @@ export default function ForgetPassword() {
                       inputType === "phone" && styles.toggleTextActive,
                     ]}
                   >
-                    📱 Số điện thoại
+                    Số điện thoại
                   </Text>
                 </TouchableOpacity>
               </View>
@@ -357,7 +357,7 @@ export default function ForgetPassword() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#F2F4F8",
+    backgroundColor: "#FFF0F6",
   },
   scrollContent: {
     flexGrow: 1,
@@ -366,80 +366,89 @@ const styles = StyleSheet.create({
   },
   card: {
     backgroundColor: "#fff",
-    borderRadius: 20,
+    borderRadius: 22,
     padding: 24,
-    shadowColor: "#000",
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.1,
-    shadowRadius: 10,
-    elevation: 5,
+    shadowColor: "#F06292",
+    shadowOffset: { width: 0, height: 6 },
+    shadowOpacity: 0.15,
+    shadowRadius: 12,
+    elevation: 6,
   },
   title: {
     fontSize: 26,
-    fontWeight: "bold",
+    fontWeight: "700",
     textAlign: "center",
-    color: "#222",
-    marginBottom: 8,
+    color: "#E91E63",
+    marginBottom: 6,
   },
   subtitle: {
     fontSize: 14,
-    color: "#666",
+    color: "#888",
     textAlign: "center",
     marginBottom: 24,
   },
+
+  /* Toggle */
   toggleContainer: {
     flexDirection: "row",
     marginBottom: 20,
-    borderRadius: 12,
-    backgroundColor: "#F7F8FA",
+    borderRadius: 14,
+    backgroundColor: "#FCE4EC",
     padding: 4,
   },
   toggleButton: {
     flex: 1,
     paddingVertical: 12,
     alignItems: "center",
-    borderRadius: 10,
+    borderRadius: 12,
   },
   toggleButtonActive: {
-    backgroundColor: "#4A90E2",
+    backgroundColor: "#F06292",
   },
   toggleText: {
     fontSize: 14,
-    color: "#666",
+    color: "#C2185B",
     fontWeight: "500",
   },
   toggleTextActive: {
     color: "#fff",
-    fontWeight: "bold",
+    fontWeight: "700",
   },
+
+  /* Input */
   input: {
-    backgroundColor: "#F7F8FA",
-    borderRadius: 12,
+    backgroundColor: "#FFF5F8",
+    borderRadius: 14,
     padding: 14,
     fontSize: 16,
     marginBottom: 14,
     borderWidth: 1,
-    borderColor: "#E8E8E8",
+    borderColor: "#F3C1D6",
+    color: "#333",
   },
+
+  /* Button */
   button: {
-    backgroundColor: "#4A90E2",
+    backgroundColor: "#F06292",
     paddingVertical: 14,
-    borderRadius: 12,
+    borderRadius: 14,
     alignItems: "center",
     marginTop: 10,
   },
   buttonDisabled: {
-    backgroundColor: "#A0C4E8",
+    backgroundColor: "#F8BBD0",
   },
   buttonText: {
     color: "#fff",
     fontSize: 16,
-    fontWeight: "bold",
+    fontWeight: "700",
   },
+
+  /* Info box */
   infoBox: {
-    backgroundColor: "#E8F4FD",
+    backgroundColor: "#FCE4EC",
     padding: 12,
-    borderRadius: 10,
+    borderRadius: 12,
     marginBottom: 16,
   },
   infoText: {
@@ -448,26 +457,31 @@ const styles = StyleSheet.create({
     textAlign: "center",
   },
   infoHighlight: {
-    fontWeight: "bold",
-    color: "#4A90E2",
+    fontWeight: "700",
+    color: "#E91E63",
   },
+
+  /* Resend */
   resendButton: {
     marginTop: 16,
     alignItems: "center",
   },
   resendText: {
-    color: "#4A90E2",
+    color: "#E91E63",
     fontSize: 14,
+    fontWeight: "500",
   },
+
+  /* Back */
   backButton: {
     marginTop: 20,
     paddingTop: 16,
     borderTopWidth: 1,
-    borderTopColor: "#E8E8E8",
+    borderTopColor: "#F3C1D6",
     alignItems: "center",
   },
   backText: {
-    color: "#666",
+    color: "#888",
     fontSize: 14,
   },
 });

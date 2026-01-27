@@ -38,7 +38,7 @@ export default function Login() {
   return (
     <View style={styles.container}>
       <View style={styles.card}>
-        <Text style={styles.title}>Welcome Back 👋</Text>
+        <Text style={styles.title}>Welcome to my app</Text>
         <Text style={styles.subtitle}>Login to your account</Text>
 
         <TextInput
@@ -61,7 +61,7 @@ export default function Login() {
           <Text style={styles.buttonText}>LOGIN</Text>
         </TouchableOpacity>
         <TouchableOpacity onPress={() => router.push("/ForgetPassword")}>
-          <Text style={styles.forgotText}>Quên mật khẩu?</Text>
+          <Text style={styles.forgotText}>Forgot password?</Text>
         </TouchableOpacity>
         <Text style={styles.footerText}>
           Don’t have an account?{" "}
@@ -76,62 +76,65 @@ export default function Login() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#F2F4F8",
+    backgroundColor: "#FFF0F6", // nền hồng rất nhạt
     justifyContent: "center",
     padding: 24,
   },
   card: {
-    backgroundColor: "#fff",
+    backgroundColor: "#FFFFFF",
     borderRadius: 20,
     padding: 24,
-    shadowColor: "#000",
-    shadowOpacity: 0.1,
-    shadowRadius: 10,
-    elevation: 5,
+    shadowColor: "#F06292",
+    shadowOpacity: 0.15,
+    shadowRadius: 12,
+    elevation: 6,
   },
   title: {
     fontSize: 28,
     fontWeight: "bold",
     textAlign: "center",
-    color: "#222",
+    color: "#E91E63", // hồng đậm
   },
   subtitle: {
     textAlign: "center",
-    color: "#777",
+    color: "#888",
     marginBottom: 24,
   },
   input: {
-    backgroundColor: "#F7F8FA",
+    backgroundColor: "#FFF5F8", // hồng rất nhạt
     borderRadius: 12,
     padding: 14,
     fontSize: 16,
     marginBottom: 14,
+    borderWidth: 1,
+    borderColor: "#F3C1D6",
+    color: "#333",
   },
   button: {
-    backgroundColor: "#4A90E2",
+    backgroundColor: "#F06292", // hồng chủ đạo
     paddingVertical: 14,
     borderRadius: 12,
     alignItems: "center",
     marginTop: 10,
   },
   buttonText: {
-    color: "#fff",
+    color: "#FFFFFF",
     fontSize: 16,
     fontWeight: "bold",
   },
   footerText: {
     textAlign: "center",
     marginTop: 20,
-    color: "#555",
+    color: "#666",
   },
   forgotText: {
     textAlign: "center",
     marginTop: 15,
-    color: "#4A90E2",
+    color: "#E91E63",
     fontSize: 14,
   },
   link: {
-    color: "#4A90E2",
+    color: "#E91E63",
     fontWeight: "bold",
   },
 });

@@ -90,59 +90,65 @@ export default function LoginScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#f2f2f2",
+    backgroundColor: "#FFF0F6", // nền hồng rất nhạt
     justifyContent: "center",
     alignItems: "center",
   },
   card: {
     width: "90%",
-    backgroundColor: "#fff",
+    backgroundColor: "#FFFFFF",
     borderRadius: 12,
     padding: 20,
     elevation: 5,
+    shadowColor: "#F06292",
+    shadowOpacity: 0.15,
+    shadowRadius: 10,
   },
   title: {
     fontSize: 22,
     fontWeight: "bold",
     textAlign: "center",
     marginBottom: 5,
+    color: "#E91E63", // hồng đậm
   },
   subtitle: {
     textAlign: "center",
-    color: "#666",
+    color: "#888",
     marginBottom: 20,
   },
   input: {
     borderWidth: 1,
-    borderColor: "#ddd",
+    borderColor: "#F3C1D6",
+    backgroundColor: "#FFF5F8",
     borderRadius: 8,
     padding: 12,
     marginBottom: 15,
+    color: "#333",
   },
   button: {
-    backgroundColor: "#007AFF",
+    backgroundColor: "#F06292", // nút hồng chủ đạo
     padding: 15,
     borderRadius: 8,
     alignItems: "center",
     marginTop: 5,
   },
   buttonText: {
-    color: "#fff",
+    color: "#FFFFFF",
     fontWeight: "bold",
   },
   forgotText: {
     textAlign: "center",
     marginTop: 10,
     marginBottom: 10,
-    color: "#555",
+    color: "#666",
   },
   footerText: {
     textAlign: "center",
     marginTop: 15,
-    color: "#555",
+    color: "#666",
   },
   link: {
-    color: "#007AFF",
+    color: "#E91E63",
     fontWeight: "bold",
   },
 });

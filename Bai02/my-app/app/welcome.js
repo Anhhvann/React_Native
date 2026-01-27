@@ -11,8 +11,7 @@ export default function Welcome() {
   return (
     <View style={styles.container}>
       <View style={styles.card}>
-        {/* Icon chào mừng */}
-        <Text style={styles.emoji}>🎉</Text>
+
         
         <Text style={styles.title}>Chào mừng!</Text>
         <Text style={styles.subtitle}>Đăng nhập thành công</Text>
@@ -26,7 +25,7 @@ export default function Welcome() {
 
         {email && (
           <View style={styles.infoRow}>
-            <Text style={styles.infoLabel}>📧 Email:</Text>
+            <Text style={styles.infoLabel}>Email:</Text>
             <Text style={styles.infoValue}>{email}</Text>
           </View>
         )}
@@ -48,18 +47,18 @@ export default function Welcome() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#4f46e5',
+    backgroundColor: '#F06292', // nền hồng chủ đạo
     justifyContent: 'center',
     padding: 24,
   },
   card: {
-    backgroundColor: '#fff',
+    backgroundColor: '#FFFFFF',
     borderRadius: 24,
     padding: 32,
     alignItems: 'center',
-    shadowColor: '#000',
+    shadowColor: '#F06292',
     shadowOffset: { width: 0, height: 10 },
-    shadowOpacity: 0.15,
+    shadowOpacity: 0.2,
     shadowRadius: 20,
     elevation: 10,
   },
@@ -70,16 +69,16 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 32,
     fontWeight: 'bold',
-    color: '#1f2937',
+    color: '#E91E63', // hồng đậm
     marginBottom: 8,
   },
   subtitle: {
     fontSize: 16,
-    color: '#6b7280',
+    color: '#9D174D',
     marginBottom: 24,
   },
   infoBox: {
-    backgroundColor: '#f0f9ff',
+    backgroundColor: '#FCE4EC', // hồng nhạt
     borderRadius: 16,
     padding: 20,
     width: '100%',
@@ -88,12 +87,12 @@ const styles = StyleSheet.create({
   },
   label: {
     fontSize: 14,
-    color: '#6b7280',
+    color: '#9D174D',
   },
   username: {
     fontSize: 24,
     fontWeight: 'bold',
-    color: '#4f46e5',
+    color: '#EC407A',
     marginTop: 4,
   },
   infoRow: {
@@ -103,29 +102,29 @@ const styles = StyleSheet.create({
   },
   infoLabel: {
     fontSize: 14,
-    color: '#6b7280',
+    color: '#9D174D',
     marginRight: 8,
   },
   infoValue: {
     fontSize: 14,
-    color: '#1f2937',
+    color: '#4A044E',
     fontWeight: '500',
   },
   divider: {
     height: 1,
-    backgroundColor: '#e5e7eb',
+    backgroundColor: '#F3C1D6',
     width: '100%',
     marginVertical: 20,
   },
   message: {
     fontSize: 14,
-    color: '#6b7280',
+    color: '#9D174D',
     textAlign: 'center',
     lineHeight: 22,
     marginBottom: 24,
   },
   button: {
-    backgroundColor: '#ef4444',
+    backgroundColor: '#EC407A', // nút hồng nổi
     paddingVertical: 14,
     paddingHorizontal: 32,
     borderRadius: 12,
@@ -133,8 +132,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   buttonText: {
-    color: '#fff',
+    color: '#FFFFFF',
     fontSize: 16,
     fontWeight: 'bold',
   },
 });
+
