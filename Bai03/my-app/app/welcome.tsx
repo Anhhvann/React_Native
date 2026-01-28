@@ -1,8 +1,8 @@
-import { View, Text, StyleSheet, TouchableOpacity, Image } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { router, useLocalSearchParams } from 'expo-router';
 
-export default function Welcome() {
-  const { username, email } = useLocalSearchParams();
+export default function WelcomeScreen() {
+  const { username, email } = useLocalSearchParams<{ username: string; email: string }>();
 
   const handleLogout = () => {
     router.replace('/');
@@ -11,8 +11,9 @@ export default function Welcome() {
   return (
     <View style={styles.container}>
       <View style={styles.card}>
+        {/* Icon chào mừng */}
+        <Text style={styles.emoji}>🎉</Text>
 
-        
         <Text style={styles.title}>Chào mừng!</Text>
         <Text style={styles.subtitle}>Đăng nhập thành công</Text>
 
@@ -25,7 +26,7 @@ export default function Welcome() {
 
         {email && (
           <View style={styles.infoRow}>
-            <Text style={styles.infoLabel}>Email:</Text>
+            <Text style={styles.infoLabel}>📧 Email:</Text>
             <Text style={styles.infoValue}>{email}</Text>
           </View>
         )}
@@ -47,94 +48,96 @@ export default function Welcome() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#F06292', // nền hồng chủ đạo
-    justifyContent: 'center',
-    padding: 24,
+    backgroundColor: "#FFD6E7", // Hồng pastel
+    justifyContent: "center",
+    padding: 20,
   },
   card: {
-    backgroundColor: '#FFFFFF',
-    borderRadius: 24,
-    padding: 32,
-    alignItems: 'center',
-    shadowColor: '#F06292',
-    shadowOffset: { width: 0, height: 10 },
+    backgroundColor: "#FFF0F6",
+    borderRadius: 25,
+    padding: 30,
+    alignItems: "center",
+    shadowColor: "#FF8BB3",
     shadowOpacity: 0.2,
-    shadowRadius: 20,
-    elevation: 10,
+    shadowRadius: 15,
+    elevation: 8,
+    borderWidth: 2,
+    borderColor: "#FFB6D9",
   },
   emoji: {
-    fontSize: 64,
-    marginBottom: 16,
+    fontSize: 70,
+    marginBottom: 10,
   },
   title: {
-    fontSize: 32,
-    fontWeight: 'bold',
-    color: '#E91E63', // hồng đậm
+    fontSize: 28,
+    fontWeight: "bold",
+    color: "#FF4F9A",
     marginBottom: 8,
   },
   subtitle: {
     fontSize: 16,
-    color: '#9D174D',
-    marginBottom: 24,
+    color: "#D46A9E",
+    marginBottom: 25,
   },
   infoBox: {
-    backgroundColor: '#FCE4EC', // hồng nhạt
-    borderRadius: 16,
-    padding: 20,
-    width: '100%',
-    alignItems: 'center',
-    marginBottom: 16,
+    backgroundColor: "#FFE6F2",
+    borderRadius: 15,
+    padding: 18,
+    width: "100%",
+    alignItems: "center",
+    marginBottom: 15,
+    borderWidth: 1,
+    borderColor: "#FFB6D9",
   },
   label: {
     fontSize: 14,
-    color: '#9D174D',
+    color: "#D46A9E",
   },
   username: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    color: '#EC407A',
-    marginTop: 4,
+    fontSize: 22,
+    fontWeight: "bold",
+    color: "#FF4F9A",
+    marginTop: 5,
   },
   infoRow: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    marginBottom: 8,
+    flexDirection: "row",
+    alignItems: "center",
+    marginBottom: 10,
   },
   infoLabel: {
     fontSize: 14,
-    color: '#9D174D',
+    color: "#D46A9E",
     marginRight: 8,
   },
   infoValue: {
     fontSize: 14,
-    color: '#4A044E',
-    fontWeight: '500',
+    color: "#FF4F9A",
+    fontWeight: "600",
   },
   divider: {
     height: 1,
-    backgroundColor: '#F3C1D6',
-    width: '100%',
+    backgroundColor: "#FFB6D9",
+    width: "100%",
     marginVertical: 20,
   },
   message: {
-    fontSize: 14,
-    color: '#9D174D',
-    textAlign: 'center',
+    textAlign: "center",
+    color: "#D46A9E",
+    fontSize: 15,
     lineHeight: 22,
-    marginBottom: 24,
+    marginBottom: 25,
   },
   button: {
-    backgroundColor: '#EC407A', // nút hồng nổi
-    paddingVertical: 14,
-    paddingHorizontal: 32,
+    backgroundColor: "#FF5CA8",
+    paddingVertical: 12,
+    paddingHorizontal: 40,
     borderRadius: 12,
-    width: '100%',
-    alignItems: 'center',
+    borderWidth: 1,
+    borderColor: "#FF91C8",
   },
   buttonText: {
-    color: '#FFFFFF',
+    color: "#fff",
     fontSize: 16,
-    fontWeight: 'bold',
+    fontWeight: "bold",
   },
 });
-
